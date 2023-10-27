@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  header {
+    @apply fixed top-0 z-50 w-full flex items-center justify-between px-4 py-4 lg:py-6 lg:px-10 transition-all;
+  }
+  body {
+    @apply bg-[#141414] text-white !scrollbar-thin !scrollbar-track-transparent;
+  }
+}
+
+@layer components {
+  .navLinks {
+    @apply cursor-pointer text-sm text-white hover:text-[#b3b3b3];
+  }
+  .input {
+    @apply outline-none bg-[#333] focus:bg-[#454545] placeholder-[gray] rounded w-full px-5 py-4;
+  }
+
+  .modalButton {
+    @apply flex items-center justify-center rounded-full border-2  hover:bg-[#181818]/80 transition-all;
+  }
+
+  .membershipLink {
+    @apply cursor-pointer text-blue-500 hover:underline;
+  }
+  .menu {
+    @apply md:hidden;
+  }
+  .menu .MuiPaper-root {
+    @apply !absolute !left-0 !rounded-none !border !border-[gray] !bg-black !text-white;
+  }
+  .menu .MuiMenuItem-root {
+    @apply !block !w-72 !py-3.5 !text-center !text-sm !font-light !text-[#b3b3b3] !transition !duration-200
+    first:!cursor-pointer first:!font-normal first:!text-white hover:!bg-[#11100f]   
+   }
+}
